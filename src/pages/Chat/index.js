@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import socketIOClient from 'socket.io-client';
 import './styles.css';
-const SERVER = 'http://localhost:3002';
-const io = socketIOClient(SERVER, { transports: ['websocket'] });
+
+require('dotenv').config()
+const io = socketIOClient(process.env.REACT_APP_SOCKET_SERVER, { transports: ['websocket'] });
 
 export default function Chat() {
   const [messages, setMessages] = useState([]);
@@ -14,7 +15,6 @@ export default function Chat() {
 
   useEffect(() => {
     async function load() {
-
       const name = await localStorage.getItem('x-user');
       setUsername(name);
       io.emit('join', name);
