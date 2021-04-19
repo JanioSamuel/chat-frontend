@@ -1,0 +1,51 @@
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin-top: 10px;
+  background-color: #668cff;
+  height: 350px;
+  font-family: 'Roboto';
+  border-radius: 5px;
+  padding-top: 10px
+}
+
+.form-login label {
+  padding-bottom: 10px;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.form-login input {
+  margin-bottom: 10px;
+  height: 32px;
+  padding: 5px;
+  width: 250px;
+  border-color: #ddd;
+  border: 0;
+  border-radius: 2px;
+}
+.btnLogin {
+  border: 1px #fff solid;
+  margin-top: 10px;
+  border-radius: 2px;
+  width: 50%;
+  height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #668cff;
+  color: #FFF;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btnLogin:hover {
+  background-color: #ccd9ff;
+  color: #414141
+}
+.companyName {
+  margin-top: 40px;
+}
