@@ -1,0 +1,23 @@
+#chatMessage {
+  margin: 10px;
+  height: 32px;
+  padding: 5px;
+  border: 1px #ddd solid;
+  width: 90%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  outline: none;
+}
+
+.btn {
+  height: 32px;
+  width: 85px;
+  background-color: transparent;
+  border: 1px #ddd solid;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #d5d5d5;
+  cursor: pointer;
+}

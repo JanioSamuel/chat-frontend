@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import './styles.css';
 
@@ -6,6 +6,15 @@ export default function Login({ history }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  useEffect(() => {
+    const token = localStorage.getItem('x-token');
+    if (token) {
+      history.push({
+        pathname: '/chat',
+        state: { status: 'new' }
+      });
+    }
+  }, []);
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -16,7 +25,10 @@ export default function Login({ history }) {
       if (response.data.token) {
         localStorage.setItem('x-token', response.data.token);
         localStorage.setItem('x-user', response.data.username);
-        history.push('/chat');
+        history.push({
+          pathname: '/chat',
+          state: { status: 'new' }
+        });
       } else {
         alert(response.data.message);
       }
